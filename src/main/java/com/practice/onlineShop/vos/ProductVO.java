@@ -6,7 +6,7 @@ import lombok.Data;
 
 @Data
 public class ProductVO {
-    private Long id;
+    private Integer id;
 
     private String code;
 

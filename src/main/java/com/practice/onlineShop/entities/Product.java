@@ -2,9 +2,8 @@ package com.practice.onlineShop.entities;
 
 import com.practice.onlineShop.enums.Currency;
 import jakarta.persistence.*;
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
+
 
 @Getter
 @Setter
@@ -15,7 +14,7 @@ public class Product {
 
     @SequenceGenerator(name="productsequence",allocationSize = 1)
     @GeneratedValue(generator = "productsequence",strategy = GenerationType.SEQUENCE)
-    private Long id;
+    private Integer id;
 
     @Column(unique = true)
     private String code;
@@ -30,11 +29,5 @@ public class Product {
     @Enumerated(EnumType.STRING)
     private Currency currency;
 
-    public Long getId() {
-        return id;
-    }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
 }

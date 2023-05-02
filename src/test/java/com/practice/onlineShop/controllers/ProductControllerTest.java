@@ -1,44 +1,46 @@
 package com.practice.onlineShop.controllers;
 
-import com.practice.onlineShop.entities.Adress;
-import com.practice.onlineShop.entities.Product;
-import com.practice.onlineShop.entities.User;
-import com.practice.onlineShop.enums.Currency;
-import com.practice.onlineShop.enums.Roles;
-import com.practice.onlineShop.repositories.ProductRepository;
-import com.practice.onlineShop.repositories.UserRepository;
-import com.practice.onlineShop.vos.ProductVO;
+
+import com.practice.onlineShop.service.ProductService;
+
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.boot.test.web.client.TestRestTemplate;
-import org.springframework.boot.test.web.server.LocalServerPort;
-
-import java.util.Set;
-
-import static org.assertj.core.api.Assertions.assertThat;
+import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
+import org.springframework.web.context.request.RequestContextHolder;
+import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class ProductControllerTest {
     @Autowired
-    private UserRepository userRepository;
-    @LocalServerPort
-    private int port;
+    private MockMvc mockMvc;
 
-    @Autowired
-    private ProductController productController;
-    @Autowired
-    private ProductRepository productRepository;
-
-    @Autowired
-    private TestRestTemplate testRestTemplate;
+    @MockBean
+    private ProductService productService;
 
 
-    @Test
-    public void contextLoads() {
-        assertThat(productController).isNotNull();
+
+
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+/* Aceasta testare sugerata de bitnett nu mi se pare ok voi incerca c mockito, wish me luck
     @Test
     public void addProductwhenhaspermission_shouldStoreTheProduct() {
         User userEntity = new User("ioana", "1234",
@@ -58,15 +60,13 @@ class ProductControllerTest {
                 productVO, Void.class);
         Iterable<Product> products = productRepository.findAll();
 
-       assertThat(products).hasSize(1);
+      assertThat(products).hasSize(1);
 
 
     Product product=products.iterator().next();
-    assertThat(product.getCode()).isEqualTo(productVO.getCode());
-    }
 
-   //mai sunt teste
-    //   TODO opinii personale daca baza de date se incarca conditia de mai sus nu mai e ok deci
-    //testul asta nu e ok pt productie
+    assertThat(product.getCode()).isEqualTo(productVO.getCode());*/
 
-}
+
+
+
