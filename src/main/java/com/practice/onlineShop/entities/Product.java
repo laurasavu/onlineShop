@@ -29,5 +29,8 @@ public class Product {
     @Enumerated(EnumType.STRING)
     private Currency currency;
 
+    public Product() {
+    }
+
 
 }

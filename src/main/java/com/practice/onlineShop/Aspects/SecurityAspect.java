@@ -36,7 +36,9 @@ public class SecurityAspect {
     @Pointcut("execution(* com.practice.onlineShop.service.ProductService.deleteProduct(..))")
     public void deleteProductPointcut() {
     }
-
+    @Pointcut("execution(* com.practice.onlineShop.service.ProductService.addStock(..))")
+    public void addStockPointcut() {
+    }
     @Before("com.practice.onlineShop.Aspects.SecurityAspect.addProductPointcut()")
     public void checkSecurityBeforeAddingProduct(JoinPoint joinPoint) throws InvalidCustomerIdException, InvalidOperationEXP {
         System.out.println("in before aspect checkSecurity" + new Date());
@@ -49,7 +51,7 @@ public class SecurityAspect {
 
         User user = useroptional.get();
         if (userisNotAllowedToChangePrduct(user.getRoles())) {
-            throw new InvalidOperationEXP();
+            throw new InvalidOperationEXP("user not allowed to add product");
         }
         //  System.out.println("user id"+customerId+useroptional);
 
@@ -67,7 +69,7 @@ public class SecurityAspect {
 
         User user = useroptional.get();
         if (userisNotAllowedToUpdatePrduct(user.getRoles())) {
-            throw new InvalidOperationEXP();
+            throw new InvalidOperationEXP("user not allowed to update product");
         }
         //  System.out.println("user id"+customerId+useroptional);
 
@@ -85,8 +87,28 @@ public class SecurityAspect {
 
         User user = useroptional.get();
         if (userisNotAllowedTodeletePrduct(user.getRoles())) {
-            throw new InvalidOperationEXP();
+            throw new InvalidOperationEXP("user not allowed to delete product");
         }
+    }
+
+    @Before("com.practice.onlineShop.Aspects.SecurityAspect.addStockPointcut()")
+    public void checkSecurityBeforechangeStock(JoinPoint joinPoint) throws InvalidCustomerIdException, InvalidOperationEXP {
+        System.out.println("in before aspect checkSecurity" + new Date());
+        System.out.println("Stock to add" + joinPoint.getArgs()[1]);
+        Long customerId = (Long) joinPoint.getArgs()[2];
+        Optional<User> useroptional = userRepository.findById(customerId.intValue());
+        if (useroptional.isEmpty()) {
+            throw new InvalidCustomerIdException();
+        }
+
+        User user = useroptional.get();
+        if (userisNotAllowedTochangeStockPrduct(user.getRoles())) {
+            throw new InvalidOperationEXP("Customer not allowed to add stock");
+        }
+    }
+
+    private boolean userisNotAllowedTochangeStockPrduct(Collection<Roles> roles) {
+        return !roles.contains(Roles.ADMIN) && !roles.contains(Roles.EDITOR);
     }
 
     private boolean userisNotAllowedTodeletePrduct(Collection<Roles> roles) {

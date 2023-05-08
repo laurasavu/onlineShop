@@ -13,18 +13,18 @@ import static org.springframework.http.ResponseEntity.status;
 @org.springframework.web.bind.annotation.ControllerAdvice
 
 public class ControllerAdvice {
-    @ExceptionHandler(InvalidCustomerIdException.class)
+   /* @ExceptionHandler(InvalidCustomerIdException.class)
     public ResponseEntity<String> hadleinvalidcustumeridexception() {
-        return status(BAD_REQUEST).body("id-ul trimis este invalid");
-    }
+        return status(BAD_REQUEST).body("Invalid Customer ID");
+    }*/
 
     @ExceptionHandler(InvalidOperationEXP.class)
     public ResponseEntity<String> hadleInvalidOperationEXP() {
-        return status(BAD_REQUEST).body("Userul nu are permisiunea de a modifica acest produs");
+        return ResponseEntity.status(BAD_REQUEST).body("Customer not allowed to add product");
     }
 
     @ExceptionHandler(InvalidCodeException.class)
     public ResponseEntity<String> hadleInvalidCodeException() {
-        return status(BAD_REQUEST).body("codul trimis este invalid");
+        return status(BAD_REQUEST).body("Invalid Product Code ");
     }
 }

@@ -60,7 +60,7 @@ private final ProductRepository productRepository;
         }
 
         if(orderVO.getIdTOQuantity().keySet().isEmpty()){
-            throw new InvalidOperationEXP();
+            throw new InvalidOperationEXP("invalid id");
         }
     }
 

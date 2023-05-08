@@ -46,10 +46,6 @@ public class ProductService {
         return  productMapper.toVO(product);
     }
 
-
-
-
-
     public void updateProduct(ProductVO productVO, Long customerId) throws InvalidCodeException, productNotFoundException {
         System.out.println("customer id in service"+customerId);
         if(productVO.getCode()==null){
@@ -74,7 +70,8 @@ public class ProductService {
         return productOptional.get();
 }
 
-    public void deleteProduct(String productCode, Long customerId) throws productNotFoundException, InvalidCodeException {
+    public void deleteProduct(String productCode, Long customerId)
+            throws productNotFoundException, InvalidCodeException {
         System.out.println("userul cu id-ul"+customerId+"sterge"+"produsul"+productCode);
         if(productCode==null){
             throw new InvalidCodeException();
@@ -83,4 +80,12 @@ public class ProductService {
        productRepository.delete(product);
     }
 
+    public void addStock(String productCode, int quantity, Long customerId) throws InvalidCodeException, productNotFoundException {
+        if(productCode==null){
+            throw new InvalidCodeException();
+        }
+        Product product=getProduct1(productCode);
+        product.setStock(product.getStock()+quantity);
+        productRepository.save(product);
+    }
 }

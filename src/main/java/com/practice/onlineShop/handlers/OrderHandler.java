@@ -14,7 +14,7 @@ import static org.springframework.http.ResponseEntity.status;
 public class OrderHandler {
     @ExceptionHandler(InvalidProductException.class)
     public ResponseEntity<String>hadleInvalidCustomerIdException(){
-        return status(BAD_REQUEST).body("id ul produsului trimis nu este valid");
+        return status(BAD_REQUEST).body("Invalid Product ID");
     }
 
 }

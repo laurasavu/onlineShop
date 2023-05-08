@@ -21,13 +21,16 @@ private final OrderMapper orderMapper;
     }
 
     public void addOrder(OrderVO orderVO) throws InvalidCustomerIdException, InvalidProductException, InvalidOperationEXP {
+       validateStock(orderVO);
         Orders orders=orderMapper.toEntity(orderVO);
-        Orders order=new Orders();
-        orderRepository.save(order);
+       /* Orders order=new Orders();
+        orderRepository.save(order);*/
         orderRepository.save(orders);
     }
 
+    private void validateStock(OrderVO orderVO) {
 
+    }
 
 
 }
