@@ -15,12 +15,12 @@ public class UserService {
 
     public UserService(UserRepository userRepository) {
         this.userRepository = userRepository;
-
+/*
     User admin=new User("Mihai", "ahd",new Adress("Pitesti","independentei",4),
             "mihai@ymail.com", Set.of(Roles.ADMIN, Roles.EXPEDITOR,Roles.EDITOR));
     User client=new User("Mihela", "ahd",new Adress("Pitesti","independentei",4),
             "mihai@ymail.com", Set.of(Roles.CLIENT));
     userRepository.save(admin);
-    userRepository.save(client);
+    userRepository.save(client);*/
 }
  }

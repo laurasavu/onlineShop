@@ -19,8 +19,8 @@ public class ControllerAdvice {
     }*/
 
     @ExceptionHandler(InvalidOperationEXP.class)
-    public ResponseEntity<String> hadleInvalidOperationEXP() {
-        return ResponseEntity.status(BAD_REQUEST).body("Customer not allowed to add product");
+    public ResponseEntity<String> hadleInvalidOperationEXP(InvalidOperationEXP e) {
+        return ResponseEntity.status(BAD_REQUEST).body(e.getMessage());
     }
 
     @ExceptionHandler(InvalidCodeException.class)

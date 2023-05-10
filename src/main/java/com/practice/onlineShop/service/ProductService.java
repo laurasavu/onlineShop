@@ -80,11 +80,13 @@ public class ProductService {
        productRepository.delete(product);
     }
 
-    public void addStock(String productCode, int quantity, Long customerId) throws InvalidCodeException, productNotFoundException {
+    public void addStock(String productCode, int quantity, Long customerId)
+            throws InvalidCodeException, productNotFoundException {
         if(productCode==null){
             throw new InvalidCodeException();
         }
         Product product=getProduct1(productCode);
+
         product.setStock(product.getStock()+quantity);
         productRepository.save(product);
     }

@@ -39,7 +39,9 @@ private final ProductRepository productRepository;
         orders.setUser(userOptional.get());
 
         Map<Integer,Integer>ProductToQuantityMap=orderVO.getIdTOQuantity();
-        List<OrderItem>orderItems=new ArrayList<>();
+
+        List<OrderItem>listWithItemsforOrder=new ArrayList<>();
+
         for(Integer productID:ProductToQuantityMap.keySet()) {
            Optional<Product>productOptional= productRepository.findById( productID);
            if(productOptional.isEmpty()){
@@ -48,9 +50,9 @@ private final ProductRepository productRepository;
            orderItem.setProduct(productOptional.get());
             Integer productquanity=ProductToQuantityMap.get(productID);
             orderItem.setQuantity(productquanity);
-           orderItems.add(orderItem);
+           listWithItemsforOrder.add(orderItem);
         }
-        orders.setOrderItems(orderItems);
+        orders.setOrderItems(listWithItemsforOrder);
         return orders;
     }
 

@@ -9,5 +9,6 @@ import java.util.Map;
 
 public class OrderVO {
     private Integer userId;
+    //productidtoQuantity
     private Map<Integer,Integer> idTOQuantity;
 }
