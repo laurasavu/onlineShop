@@ -1,4 +1,30 @@
-OnlineShop is a simple Spring Boot application providing a REST API.
+Portfolio
+My portfolio as an aspiring Junior Java Developer
+
+About Me
+CV
+Skills
+Tools
+Courses
+Examples of my work-OnlineShop-Spring Boot application providing a REST API and how it performed using Postman
+
+About Me
+
+in today's society, the ability to adapt professionally is an important quality and for me a professional reconversion responds to the new requirements and opportunities in the labor market as well as the needs of my current life. Thus began the interaction with the java programming language as well as the development of knowledge in the field that I want to apply in my professional future.
+
+
+CV
+
+here is a shortcut to my <a href="https://www.linkedin.com/in/laura-savu-816503105/">CV</a>
+
+
+
+
+
+
+
+
+OnlineShop is a Spring Boot application providing a REST API.
 It provides endpoints for various opperations on Products and Orders and uses a Postgresql Database to save data.
 
 Requirements
