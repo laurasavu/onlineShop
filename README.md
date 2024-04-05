@@ -8,7 +8,10 @@ Tools
 Courses
 Examples of my work-OnlineShop-Spring Boot application providing a REST API and how it performed using Postman
 
-<font size="16">About Me</font>
+## Heading
+
+**Bold Text**
+<font size="18">About Me</font>
 
 in today's society, the ability to adapt professionally is an important quality and for me a professional reconversion responds to the new requirements and opportunities in the labor market as well as the needs of my current life. Thus began the interaction with the java programming language as well as the development of knowledge in the field that I want to apply in my professional future.
 
