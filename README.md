@@ -20,19 +20,75 @@ in today's society, the ability to adapt professionally is an important quality 
 
 <font size="20"></font>
 
-here is a shortcut to my <a href="https://www.linkedin.com/in/laura-savu-816503105/">CV</a>
+Here is a shortcut to my <a href="https://www.linkedin.com/in/laura-savu-816503105/">CV</a>
 
 ## **Skills**
 
 <font size="20"></font>
 
+You can find examples of my work in Examples of my work
+
+JAVA and Spring Boot: Proficient in Java programming language with expertise in Spring Boot framework 
+
+Unit Testing:
+* Proficient in using frameworks like JUnit to construct basic unit tests, ensuring individual components function correctly.
+* Test-Driven Development (TDD): I employ TDD principles, composing tests before code implementation, guiding development and fostering code testability.
+* Mocking utilizing tools such as Mockito to fabricate mock objects 
+* Integration Testing basic understanding in developing integration tests to validate interactions between components
+* Test Coverage: I aim for comprehensive test coverage 
+
+API Testing
+*familiar with Postman requests
+
+
+
 ## **Tools**
 
 <font size="20"></font>
 
+* Postman
+familiar with Postman requests
+
+* GIT
+
+* Postgresql Database
+
+* Cloud Computing:
+ Proficient in basic cloud computing concepts and services,
+ with basic experience in utilizing cloud platforms for hosting and managing applications, expecialy Azure and Google Cloud Platform.
+
+* E-commerce Development with WordPress
+
 ## **Courses**
 
 <font size="20"></font>
+
+* Java Developer Certification
+        Issuer: Bittnet Training
+        Date Issued: May 2023
+
+Skills: JUnit, Spring Boot, Back-End Web Development, Postman, Unit Testing, REST APIs, Spring Framework, Model-View-Controller (MVC), Maven, Java Development, Hibernate, Git, GitHub, Application Programming Interfaces (API)
+
+* Microsoft Certified: Azure Fundamentals
+        Issuer: Microsoft
+        Date Issued: Sep 2022
+
+Skills: Cloud Development, Cloud Computing IaaS, Cloud Computing, Microsoft Azure
+
+* Google IT Support Specialization
+        Issuer: Coursera
+        Date Issued: Sep 2021
+        Credential ID: PRWQEDX4D9ZX
+
+Skills: Programming
+
+* IBM SkillsBuild - What is artificial intelligence?
+        Issuer: IBM SkillsBuild
+   
+* "Java Programming Masterclass covering Java 11 & Java 17" course on Udemy
+a comprehensive Java programming course that covers both Java 11 and Java 17 versions. 
+This course is designed to provide learners with a solid foundation in Java programming, including both core concepts and advanced topics.
+
 
 ## **Examples of my work**
 
