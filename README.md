@@ -1,25 +1,42 @@
-Portfolio
+## **Portfolio**
+
+<font size="20"></font>
 My portfolio as an aspiring Junior Java Developer
 
-About Me
-CV
-Skills
-Tools
-Courses
-Examples of my work-OnlineShop-Spring Boot application providing a REST API and how it performed using Postman
+* About Me
+* CV
+* Skills
+* Tools
+* Courses
+* Examples of my work-OnlineShop-Spring Boot application providing a REST API and how it performed using Postman
 
 
-<font size="20">**About Me**</font>
+## **About Me**
 
+<font size="20"></font>
 in today's society, the ability to adapt professionally is an important quality and for me a professional reconversion responds to the new requirements and opportunities in the labor market as well as the needs of my current life. Thus began the interaction with the java programming language as well as the development of knowledge in the field that I want to apply in my professional future.
 
+## **CV**
 
-CV
+<font size="20"></font>
 
 here is a shortcut to my <a href="https://www.linkedin.com/in/laura-savu-816503105/">CV</a>
 
+## **Skills**
 
+<font size="20"></font>
 
+## **Tools**
+
+<font size="20"></font>
+
+## **Courses**
+
+<font size="20"></font>
+
+## **Examples of my work**
+
+<font size="20"></font>
 
 
 
